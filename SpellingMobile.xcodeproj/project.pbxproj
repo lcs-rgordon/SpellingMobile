@@ -6,17 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		811D6DE92DA7E65800463824 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 811D6DE32DA7E65800463824 /* Preview Assets.xcassets */; };
+		811D6DEA2DA7E65800463824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 811D6DE52DA7E65800463824 /* Assets.xcassets */; };
+		811D6DEB2DA7E65800463824 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811D6DE62DA7E65800463824 /* QuizView.swift */; };
+		811D6DEC2DA7E65800463824 /* SpellingMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811D6DE72DA7E65800463824 /* SpellingMobileApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		811D6DD22DA7E64900463824 /* SpellingMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpellingMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		811D6DE32DA7E65800463824 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		811D6DE52DA7E65800463824 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		811D6DE62DA7E65800463824 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		811D6DE72DA7E65800463824 /* SpellingMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellingMobileApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		811D6DD42DA7E64900463824 /* SpellingMobile */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SpellingMobile;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		811D6DCF2DA7E64900463824 /* Frameworks */ = {
@@ -32,7 +35,7 @@
 		811D6DC92DA7E64900463824 = {
 			isa = PBXGroup;
 			children = (
-				811D6DD42DA7E64900463824 /* SpellingMobile */,
+				811D6DE82DA7E65800463824 /* SpellingMobile */,
 				811D6DD32DA7E64900463824 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +46,49 @@
 				811D6DD22DA7E64900463824 /* SpellingMobile.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		811D6DE42DA7E65800463824 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				811D6DE32DA7E65800463824 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		811D6DE82DA7E65800463824 /* SpellingMobile */ = {
+			isa = PBXGroup;
+			children = (
+				811D6DE72DA7E65800463824 /* SpellingMobileApp.swift */,
+				811D6DED2DA7E65C00463824 /* Model */,
+				811D6DEF2DA7E66500463824 /* ViewModel */,
+				811D6DEE2DA7E66100463824 /* Views */,
+				811D6DE42DA7E65800463824 /* Preview Content */,
+				811D6DE52DA7E65800463824 /* Assets.xcassets */,
+			);
+			path = SpellingMobile;
+			sourceTree = "<group>";
+		};
+		811D6DED2DA7E65C00463824 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		811D6DEE2DA7E66100463824 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				811D6DE62DA7E65800463824 /* QuizView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		811D6DEF2DA7E66500463824 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +105,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				811D6DD42DA7E64900463824 /* SpellingMobile */,
 			);
 			name = SpellingMobile;
 			packageProductDependencies = (
@@ -109,6 +152,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811D6DE92DA7E65800463824 /* Preview Assets.xcassets in Resources */,
+				811D6DEA2DA7E65800463824 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811D6DEB2DA7E65800463824 /* QuizView.swift in Sources */,
+				811D6DEC2DA7E65800463824 /* SpellingMobileApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

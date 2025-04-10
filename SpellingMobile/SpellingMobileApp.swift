@@ -11,7 +11,7 @@ import SwiftUI
 struct SpellingMobileApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            QuizView()
         }
     }
 }
