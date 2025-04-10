@@ -12,6 +12,7 @@
 		811D6DEB2DA7E65800463824 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811D6DE62DA7E65800463824 /* QuizView.swift */; };
 		811D6DEC2DA7E65800463824 /* SpellingMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811D6DE72DA7E65800463824 /* SpellingMobileApp.swift */; };
 		811D6DF12DA7E6E400463824 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811D6DF02DA7E6E400463824 /* Item.swift */; };
+		811D6DF32DA7E72100463824 /* Outcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811D6DF22DA7E72100463824 /* Outcome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		811D6DE62DA7E65800463824 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		811D6DE72DA7E65800463824 /* SpellingMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellingMobileApp.swift; sourceTree = "<group>"; };
 		811D6DF02DA7E6E400463824 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		811D6DF22DA7E72100463824 /* Outcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outcome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		811D6DED2DA7E65C00463824 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				811D6DF22DA7E72100463824 /* Outcome.swift */,
 				811D6DF02DA7E6E400463824 /* Item.swift */,
 			);
 			path = Model;
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811D6DF32DA7E72100463824 /* Outcome.swift in Sources */,
 				811D6DEB2DA7E65800463824 /* QuizView.swift in Sources */,
 				811D6DF12DA7E6E400463824 /* Item.swift in Sources */,
 				811D6DEC2DA7E65800463824 /* SpellingMobileApp.swift in Sources */,
