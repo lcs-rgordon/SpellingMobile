@@ -46,7 +46,9 @@ class QuizViewModel {
     // Check the user's guess
     func checkGuess() {
         
-        if userGuess == currentItem.word {
+        // Change capitals to lowercase before comparing
+        // Then see if what the user typed is accurate
+        if userGuess.lowercased() == currentItem.word {
             currentOutcome = .correct
         } else {
             currentOutcome = .incorrect
