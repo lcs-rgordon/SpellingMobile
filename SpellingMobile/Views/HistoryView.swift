@@ -10,7 +10,12 @@ import SwiftUI
 struct HistoryView: View {
     
     // MARK: Stored properties
+    
+    // Access the view model
     @Environment(QuizViewModel.self) var viewModel
+    
+    // Holds the search text the user has entered
+    @State var searchText = ""
     
     // MARK: Computed properties
     var body: some View {
@@ -31,11 +36,19 @@ struct HistoryView: View {
                 .pickerStyle(.segmented)
                 
                 // Show previous outcomes (might be filtered)
+
+                let filteredList = filtering(
+                    originalList: viewModel.history,
+                    on: viewModel.selectedOutcomeFilter
+                )
+                
+                let filteredAndSearchedList = searching(
+                    originalList: filteredList,
+                    against: searchText
+                )
+                
                 List(
-                    filtering(
-                        originalList: viewModel.history,
-                        on: viewModel.selectedOutcomeFilter
-                    )
+                    filteredAndSearchedList
                 ) { currentResult in
                     
                     HStack {
@@ -54,6 +67,7 @@ struct HistoryView: View {
                     }
                    
                 }
+                .searchable(text: $searchText)
                 .listStyle(.plain)
 
                 

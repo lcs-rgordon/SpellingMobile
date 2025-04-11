@@ -37,7 +37,7 @@ class QuizViewModel {
     // It is "true" to start since when the view model first loads,
     // a new word is already presented to the user.
     var isNewWordButtonDisabled = true
-    
+        
     // MARK: Initializer(s)
     init() {
         // Initializer is included but doesn't need
