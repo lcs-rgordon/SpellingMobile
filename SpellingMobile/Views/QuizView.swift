@@ -39,7 +39,7 @@ struct QuizView: View {
                         
                     HStack {
                     
-                        // Let the user check their guess
+                        // Let the user pick a new word
                         Button {
                             viewModel.saveResult()
                             viewModel.newWord()
@@ -74,8 +74,13 @@ struct QuizView: View {
                     }
                     .pickerStyle(.segmented)
                     
-                    // Show previous outcomes
-                    List(viewModel.history) { currentResult in
+                    // Show previous outcomes (might be filtered)
+                    List(
+                        filtering(
+                            originalList: viewModel.history,
+                            on: viewModel.selectedOutcomeFilter
+                        )
+                    ) { currentResult in
                         
                         HStack {
 
@@ -89,7 +94,7 @@ struct QuizView: View {
                             Spacer()
                             
                             Text(currentResult.outcome.rawValue)
-             
+                                
                         }
                        
                     }
