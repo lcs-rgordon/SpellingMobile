@@ -33,6 +33,11 @@ class QuizViewModel {
     // (not yet used in the app, but will be soon)
     var selectedOutcomeFilter: Outcome = .undetermined
     
+    // Keep track of whether the new word button should be disabed
+    // It is "true" to start since when the view model first loads,
+    // a new word is already presented to the user.
+    var isNewWordButtonDisabled = true
+    
     // MARK: Initializer(s)
     init() {
         // Initializer is included but doesn't need
@@ -53,6 +58,10 @@ class QuizViewModel {
         } else {
             currentOutcome = .incorrect
         }
+        
+        // New word button should now be enabled so user
+        // can keep playing the game
+        isNewWordButtonDisabled = false
         
     }
     
@@ -82,6 +91,10 @@ class QuizViewModel {
         
         // We don't yet know what the outcome of the user's guess is
         currentOutcome = .undetermined
+        
+        // Once a new word is selected, disable the
+        // new word button again
+        isNewWordButtonDisabled = true
     }
         
 }

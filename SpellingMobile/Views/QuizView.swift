@@ -48,6 +48,7 @@ struct QuizView: View {
                         }
                         .buttonStyle(.borderedProminent)
                         .tint(.green)
+                        .disabled(viewModel.isNewWordButtonDisabled)
 
                         // Let the user check their guess
                         Button {
