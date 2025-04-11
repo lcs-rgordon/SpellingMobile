@@ -9,9 +9,20 @@ import SwiftUI
 
 @main
 struct SpellingMobileApp: App {
+    
+    // MARK: Stored properties
+    
+    // Access the view model which runs the mechanics
+    // of the game for us
+    @State var viewModel = QuizViewModel()
+    
+    // MARK: Computed properties
     var body: some Scene {
         WindowGroup {
-            QuizView()
+            LandingView()
+            // Add the view model to the environment so
+            // data can be used by other views
+            .environment(viewModel)
         }
     }
 }

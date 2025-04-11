@@ -10,17 +10,18 @@ import SwiftUI
 struct QuizView: View {
     
     // MARK: Stored properties
-    
-    // Access the view model which runs the mechanics
-    // of the game for us
-    @State var viewModel = QuizViewModel()
-    
+    @Environment(QuizViewModel.self) var viewModel
+        
     // MARK: Computed properties
     
     // This presents the user interface
     var body: some View {
         
         NavigationStack {
+            
+            // Create a two-way binding to the view model through the
+            // environment
+            @Bindable var viewModelBindable = viewModel
             
             VStack {
 
@@ -31,7 +32,7 @@ struct QuizView: View {
                         .scaledToFit()
                     
                     HStack {
-                        TextField("Enter the name of the item", text: $viewModel.userGuess)
+                        TextField("Enter the name of the item", text: $viewModelBindable.userGuess)
                             .textFieldStyle(.roundedBorder)
 
                         Text(viewModel.currentOutcome.rawValue)
@@ -62,51 +63,9 @@ struct QuizView: View {
                     
                 }
                 .padding()
-                
-                // Bottom part of interface shows history
-                VStack {
-                   
-                    // Picker to select what outcome to show
-                    Picker("Filtering on", selection: $viewModel.selectedOutcomeFilter) {
-                        // Options that show up in the picker
-                        Text("All results").tag(Outcome.undetermined)
-                        Text("Correct").tag(Outcome.correct)
-                        Text("Incorrect").tag(Outcome.incorrect)
-                    }
-                    .pickerStyle(.segmented)
-                    
-                    // Show previous outcomes (might be filtered)
-                    List(
-                        filtering(
-                            originalList: viewModel.history,
-                            on: viewModel.selectedOutcomeFilter
-                        )
-                    ) { currentResult in
-                        
-                        HStack {
-
-                            Image(currentResult.item.imageName)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 50)
-                            
-                            Text(currentResult.guessProvided)
-                            
-                            Spacer()
-                            
-                            Text(currentResult.outcome.rawValue)
                                 
-                        }
-                       
-                    }
-                    .listStyle(.plain)
-
-                    
-                }
-                .padding()
-                
             }
-            .navigationTitle("Spelling Quiz")
+            .navigationTitle("Quiz")
 
         }
         
@@ -115,4 +74,5 @@ struct QuizView: View {
 
 #Preview {
     QuizView()
+        .environment(QuizViewModel())
 }
